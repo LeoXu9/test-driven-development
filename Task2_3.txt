@@ -1,0 +1,20 @@
+I had two approaches.
+
+First is to reduce the number of tests. I noticed that there
+were some test that were too redundant and did not contribute
+to coverage increase. I decided to remove these tests.
+
+Second is to get rid of the tests that takes too much memory
+usage. I used run configuration -Xms2m. This command enables me
+to limit the memory allocation resource for running the tests.
+Now I only have 2m memory allocation. However, I am still able to
+run all the tests. Although this is a intuitive and objective way
+to limit resource, it did not give me any result straight away.
+
+Logically speaking, the tests that creates multiple array, lists, and
+hashmap objects take the most memory. So I decided to get rid of
+some tests that test the equals function. This way less objects
+are created for the hashmap.
+
+I have also removed all the tests contain replace, including bug12 and bug18.
+This is because these created lots of arrays which can take lots of memory.

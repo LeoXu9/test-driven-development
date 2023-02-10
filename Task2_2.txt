@@ -1,0 +1,14 @@
+The switch line in parser cannot be covered since it is unreachable.
+When I tried to put type that is not the four(String, boolean, integer, character),
+The program would not be able to start.
+The getBoolean line in parser cannot be covered since the value cannot suffice to reach all branches.
+For example, The value cannot be false and 0 at the same time.
+
+Same for the lines in equals function in option class,
+the program would not run for some of branches so they cannot be reached.
+
+In the optionmap class, (if option !=null) is unreachable inside the two functions.
+Some other error takes place before this line reaches
+when i tried to give an option that is null.
+
+Above are unreable lines and My final result is 99.5% coverage.
